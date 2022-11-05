@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Local CSS -->
+    <link href="popup.css" rel="stylesheet">
+
+    <title>Github Tools</title>
+  </head>
+  <body>
+    
+    <div class="container mb-3 mt-3 bg-light">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="h2">Github Tools</div>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Find commits before date
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row">
+                  <!-- Tool start  -->
+                  <div class="col-6">
+                    <div class="input-group mb-3 mt-2">
+                      <span class="input-group-text" id="month">Month</span>
+                      <input type="text" class="form-control month-input" placeholder="" aria-label="Username" aria-describedby="month">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="input-group mb-3 mt-2">
+                      <span class="input-group-text" id="year">Year</span>
+                      <input type="text" class="form-control year-input" placeholder="" aria-label="Username" aria-describedby="year">
+                    </div>
+                  </div>
+                  <!-- Tool end  -->
+                </div>
+                <div class="d-grid">
+                  <button type="button" id="commits-btn" class="btn btn-primary btn-block">Find Commits</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Find LOC @ commit Id
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="input-group">
+                        <span class="input-group-text" id="sha">Sha</span>
+                        <input type="text" class="form-control sha-input" placeholder="" aria-label="Username" aria-describedby="sha">
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div>
+                        <button type="button" id="loc-btn" class="btn mb-3 btn-primary">Find LOC</button>
+                      </div>
+                    </div>
+                  </div>
+                <div id="loc-display" class="alert alert-primary" style="display: none"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid">
+            <button type="button" id="first-commit-btn" class="btn btn-primary btn-block mt-3">Go to first commit in repo</button>
+          </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="./moment.js" ></script>
+    <script type="text/javascript" src="./popup.js" ></script>
+  </body>
+  
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "GitHub Tools",
+  "description": "A collection of tools for github",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "github-tools",
+    "default_icon": "/icons/icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "/icons/icon.png",
+    "48": "/icons/icon.png",
+    "128": "/icons/icon.png"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "activeTab"
+  ]
+}
